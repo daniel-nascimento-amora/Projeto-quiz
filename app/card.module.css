@@ -2,6 +2,7 @@
 
 .card {
   border: 1px solid var(--primary);
+  background-color: var(--bg);
 }
 
 @media (min-width: 600px) {

@@ -1,6 +1,6 @@
 :root {
-  --primary: #3F51B5;
-  --bg: #222222;
+  --primary: #030722d7;
+  --bg: #2426b8b8;
   --text: #FFFFFF;
 }
 
@@ -10,6 +10,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 body {
