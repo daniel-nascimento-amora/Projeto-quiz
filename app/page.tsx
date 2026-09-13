@@ -1,22 +1,29 @@
-import cardStyles from "./layout";
+import cardStyles from "./card.module.css";
+
 
 
 
 export default function Page() {
   return (
     
-      <main>
-        <div className = {cardStyles.card} >
-          <header>
-            <h1>Teste suas Habilidades</h1>
-            </header>
-            <p>Teste seus conhecimentos sobre temas variados</p>
-            <p>FORMULÁRIO/BOTÃO</p>
-            <footer><p>
-              Criado por Daniel Amora
-            </p></footer>
-            </div>
-      </main>
+     <main>
+  <div className={cardStyles.card}>
+    <header className={cardStyles.cardHeader}>
+      <h1 className={cardStyles.cardHeaderTitle}>Teste suas habilidades</h1>
+    </header>
+    <p>
+      Teste os seus conhecimentos sobre os mais variados temas.
+    </p>
+    <p>
+      FORMULÁRIO / BOTÃO
+    </p>
+    <footer>
+      <p>
+        Desenvolvedor Daniel Amora.
+      </p>
+    </footer>
+  </div>
+</main>
 
 
          

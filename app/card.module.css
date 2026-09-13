@@ -1,4 +1,14 @@
-.card {
 
-    border: 1px solid #3F51B5
+
+.card {
+  border: 1px solid var(--primary);
+}
+
+.cardHeader {
+  padding: 18px 33px;
+  background-color: var(--primary);
+}
+
+.cardHeaderTitle {
+  font-size: 16px;
 }
