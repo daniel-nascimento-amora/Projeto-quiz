@@ -1,7 +1,10 @@
 import homeStyles from "./home.module.css";
 import cardStyles from "./card.module.css";
-import Quizlogo from "./components/quizlogo";
 import QuizLogo from "./components/quizlogo";
+import { QuizLogoBottom } from "./components/quizlogobottom";
+import { Footer } from "./components/Footer";
+
+
 
 
 
@@ -39,11 +42,7 @@ export default function Page() {
       </p>
     </section>
   </div>
-  <footer>
-    <p>
-      Desenvolvedor Daniel Amora.
-    </p>
-  </footer>
+  <Footer/>
 </main>
 
          
