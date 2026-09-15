@@ -1,6 +1,6 @@
  
 
-.homeScreen {
+.screen {
     background-size: cover;
     background-position: center;
     padding-left: 13px;
@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 600px) {
-    .homeScreen {
+    .screen {
         background: url("/images/BG5.PNG");
         background-size: cover;
         padding-left: 10%;
