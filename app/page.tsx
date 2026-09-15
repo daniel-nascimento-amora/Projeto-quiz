@@ -1,8 +1,8 @@
 import homeStyles from "./home.module.css";
-import cardStyles from "./card.module.css";
 import QuizLogo from "./components/quizlogo";
 import { QuizLogoBottom } from "./components/quizlogobottom";
 import { Footer } from "./components/Footer";
+import Card from "./components/Card";
 
 
 
@@ -17,9 +17,9 @@ export default function Page() {
     
      
 <main className={homeStyles.homeScreen} style={{ flex: 1 }}>
+  <section className={homeStyles.container}>
    <div
   style={{
-    maxWidth: "350px",
     display: "flex",
     justifyContent: "right",
     marginBottom: "24px"
@@ -29,20 +29,9 @@ export default function Page() {
 </div>
    
    
-       <div className={cardStyles.card}>
-    <header className={cardStyles.cardHeader}>
-      <h1 className={cardStyles.cardHeaderTitle}>Teste suas habilidades</h1>
-    </header>
-    <section className={cardStyles.cardBody}>
-      <p>
-        Teste os seus conhecimentos sobre os mais variados temas.
-      </p>
-      <p>
-        FORMULÁRIO / BOTÃO
-      </p>
-    </section>
-  </div>
+  <Card />
   <Footer/>
+  </section>
 </main>
 
          
