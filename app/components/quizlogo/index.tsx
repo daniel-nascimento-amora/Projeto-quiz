@@ -2,9 +2,13 @@
 // então criei uma imagem no Canva, removi o fundo, mandei ela para o gemini 
 // e pedi para ele gerar o código svg para colocar no Typescript. Futuramente corrigir isso,
 //criar imagem no figma e mudar o return imporvisado abaixo, para o correto
+import Link from "next/link";
+
+
 
 export default function QuizLogo() {
   return (
+    <Link href="/">
     <div className="quiz-logo">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="300" height="350">
         <style>
@@ -27,6 +31,8 @@ export default function QuizLogo() {
         {/* QUIZ Text Foreground (Yellow) */}
         <text x="200" y="370" textAnchor="middle" className="text-main" fill="#ffd700">QUIZ</text>
       </svg>
+      
     </div>
+    </Link>
   );
 }

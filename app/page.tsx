@@ -3,7 +3,7 @@ import QuizLogo from "./components/quizlogo";
 import { QuizLogoBottom } from "./components/quizlogobottom";
 import { Footer } from "./components/Footer";
 import Card from "./components/Card";
-
+import Link from "next/link";
 
 
 
@@ -38,7 +38,7 @@ export default function Page() {
       <p>
         FORMULÁRIO / BOTÃO
       </p>
-      <a href= "/game">JOGAR</a>
+      <Link href= "/game">JOGAR</Link>
   </Card>
   <Footer/>
   </section>
