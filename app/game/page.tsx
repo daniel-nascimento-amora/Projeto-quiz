@@ -3,10 +3,25 @@ import Card from "../components/Card";
 import pageStyles from "../page.module.css";
 import { Footer } from "../components/Footer";
 
+
+const questions = [
+  {
+  image: "https://sharpmindlogic.com/wp-content/uploads/2026/09/bgproje.jpg",
+  title: "Qual é a capital da França?",
+  description: "Escolha a resposta correta entre as opções abaixo.",
+  alternatives: ["Paris", "Londres", "Berlim", "Madrid"]
+}
+
+  
+];
+
 export default function GameScreen() {
+  const currentQuestion = 0;
+  const questionNumber = currentQuestion + 1;
+  const question = questions[currentQuestion];
   return (
     <main className={pageStyles.screen} style={{ flex: 1,
-      backgroundImage: "url('https://sharpmindlogic.com/wp-content/uploads/2026/09/bgproje.jpg')",
+      backgroundImage: "url(" + question.image + ")",
      }}>
       <section className={pageStyles.container}>
 
@@ -21,10 +36,10 @@ export default function GameScreen() {
         </div>
         <QuizLogo />
       <Card
-        headerTitle="Pergunta 1 de 5"
+        headerTitle={"Pergunta " + questionNumber + " de " + questions.length}
       >
-        <h1>Qual o maior país do mundo?</h1>
-        <p>Teste seus conhecimentos gerais.</p>
+        <h1>{question.title}</h1>
+        <p>{question.description}</p>
       </Card>
       <Footer />
       </section>
