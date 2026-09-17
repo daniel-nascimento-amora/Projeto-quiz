@@ -33,6 +33,22 @@ export default function GameScreen() {
       >
         <h1>{question.title}</h1>
         <p>{question.description}</p>
+      <form>
+        {question.alternatives.map((alternative, Index) => (
+        <label>
+          {alternative}
+          <input type="radio" 
+                 id={"alternative-${Index}"}
+                 name="alternative"/>
+        </label>
+        ))}
+       
+        
+          <button>
+            Confirmar
+          </button>
+
+      </form>
       </Card>
       <Footer />
       </section>
