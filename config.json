@@ -1,0 +1,13 @@
+{
+
+"questions": [
+     {
+  "image": "https://sharpmindlogic.com/wp-content/uploads/2026/09/bgproje.jpg",
+  "title": "Qual é a capital da França?",
+  "description": "Escolha a resposta correta entre as opções abaixo.",
+  "alternatives": ["Paris", "Londres", "Berlim", "Madrid"]
+}
+
+  ]
+
+}
