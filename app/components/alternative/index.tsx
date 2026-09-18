@@ -14,7 +14,9 @@ export function Alternative(props: AlternativeProps) {
           
           <input type="radio" 
                  id={"alternative-${props.order}"}
-                 name="alternative"/>
+                 name="alternative"
+                 defaultValue={props.order}
+            />     
           {props.label}
         </label>
   )

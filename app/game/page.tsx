@@ -1,4 +1,6 @@
+"use client";
 import QuizLogo from "../components/quizlogo";
+import React from "react";
 import Card from "../components/Card";
 import pageStyles from "../page.module.css";
 import { Footer } from "../components/Footer";
@@ -11,7 +13,7 @@ const questions = config.questions;
 
 
 export default function GameScreen() {
-  const currentQuestion = 0;
+  const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionNumber = currentQuestion + 1;
   const question = questions[currentQuestion];
   return (
@@ -35,7 +37,19 @@ export default function GameScreen() {
       >
         <h1>{question.title}</h1>
         <p>{question.description}</p>
-      <form>
+      <form
+        onSubmit={(event) => {
+  event.preventDefault();
+  const $questionInfo = event.target as HTMLFormElement;
+  const formData = new FormData($questionInfo);
+  const { alternative } = Object.fromEntries(formData.entries());
+  const isCorrectAnswer = alternative === question.answer;
+  setCurrentQuestion(currentQuestion + 1);
+}}
+
+
+      
+      >
         {question.alternatives.map((alternative, Index) => (
           <Alternative 
           key={alternative+Index}
