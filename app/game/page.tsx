@@ -1,6 +1,6 @@
 "use client";
-import QuizLogo from "../components/quizlogo";
 import React from "react";
+import QuizLogo from "../components/quizlogo";
 import Card from "../components/Card";
 import pageStyles from "../page.module.css";
 import { Footer } from "../components/Footer";
@@ -8,11 +8,25 @@ import config from "../../config.json";
 import styles from './style.module.css';
 import { Alternative } from "../components/alternative"; 
 
+//mudar de questão funcional
+// limitador de segurança
+//1:28:12
+//ponto de segurança 2, 1:30
+//1:31
+
 const questions = config.questions;
+
+const answerStates = {
+  DEFAULT: "DEFAULT",
+  ERROR: "ERROR",
+  SUCCESS: "SUCCESS"
+}as const;  
 
 
 
 export default function GameScreen() {
+   const [answerState, setAnswerState] = React.useState<keyof typeof answerStates>(answerStates.DEFAULT);
+
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionNumber = currentQuestion + 1;
   const question = questions[currentQuestion];
@@ -43,10 +57,16 @@ export default function GameScreen() {
   const $questionInfo = event.target as HTMLFormElement;
   const formData = new FormData($questionInfo);
   const { alternative } = Object.fromEntries(formData.entries());
+  
   const isCorrectAnswer = alternative === question.answer;
+  if (isCorrectAnswer) {
+    setAnswerState(answerStates.SUCCESS);
+  }
+  if (!isCorrectAnswer) {
+  setAnswerState(answerStates.ERROR);
+}
   setCurrentQuestion(currentQuestion + 1);
 }}
-
 
       
       >
@@ -59,10 +79,23 @@ export default function GameScreen() {
           />
         ))}
        
-        
-          <button>
+        {answerState === "DEFAULT" && (
+              <button>
             Confirmar
           </button>
+            
+        )}
+
+        {answerState === "ERROR" && (
+            "❌"
+            
+        )}
+         {answerState === "SUCCESS" && (
+            "✅"
+            
+        )}
+          
+
 
       </form>
       </Card>
