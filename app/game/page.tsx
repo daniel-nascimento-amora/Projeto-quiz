@@ -2,7 +2,9 @@ import QuizLogo from "../components/quizlogo";
 import Card from "../components/Card";
 import pageStyles from "../page.module.css";
 import { Footer } from "../components/Footer";
-import config from "../../config.json";  
+import config from "../../config.json"; 
+import styles from './style.module.css';
+import { Alternative } from "../components/alternative"; 
 
 const questions = config.questions;
 
@@ -35,12 +37,12 @@ export default function GameScreen() {
         <p>{question.description}</p>
       <form>
         {question.alternatives.map((alternative, Index) => (
-        <label>
-          {alternative}
-          <input type="radio" 
-                 id={"alternative-${Index}"}
-                 name="alternative"/>
-        </label>
+          <Alternative 
+          key={alternative+Index}
+          label={alternative}
+          order={Index}
+
+          />
         ))}
        
         
