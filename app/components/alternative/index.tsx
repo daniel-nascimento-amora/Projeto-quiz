@@ -4,6 +4,7 @@ import styles from "./style.module.css";
 interface AlternativeProps {
   label: string;
   order: number;
+  
 }
 
 
