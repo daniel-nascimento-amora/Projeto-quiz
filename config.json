@@ -14,6 +14,28 @@
   "description": "Escolha a resposta correta entre as opções abaixo.",
   "alternatives": ["Brasilia", "Fortaleza", "Rio de Janeiro", "Maceio"],
   "answer": "0"
+     },
+     {
+  "image": "https://sharpmindlogic.com/wp-content/uploads/2026/09/bgproje.jpg",
+  "title": "Qual mês do ano tem apenas 28 dias?",
+  "description": "Escolha a resposta correta entre as opções abaixo.",
+  "alternatives": ["Março", "Abril", "Janeiro", "Fevereiro"],
+  "answer": "3"
+     },
+     {
+  "image": "https://sharpmindlogic.com/wp-content/uploads/2026/09/bgproje.jpg",
+  "title": "Qual a montanha mais alta do mundo?",
+  "description": "Escolha a resposta correta entre as opções abaixo.",
+  "alternatives": ["Monte Fuji", "Everest", "K2", "Kangchenjung"],
+  "answer": "1"
+     },
+
+     {
+  "image": "https://sharpmindlogic.com/wp-content/uploads/2026/09/bgproje.jpg",
+  "title": "Quem é o homem mais rico do mundo?",
+  "description": "Escolha a resposta correta entre as opções abaixo.",
+  "alternatives": ["Bill Gates", "Zeca Pagodinho", "Elon Musk", "Neymar"],
+  "answer": "2"
      }
      
   ]
