@@ -83,23 +83,19 @@ export default function GameScreen() {
               }, 1 * 2000);
             }}
           >
-            {question.alternatives.map((alternative, Index) => (
-              //aqui
-
+            {question.alternatives.map((alternative, index) => (
+              // O "key" foi movido para a tag div que é o elemento raiz do map
               <div 
-               style= {{
-
-                marginBottom: "8px",
-               }}
+                key={alternative + index}
+                style={{
+                  marginBottom: "8px",
+                }}
               >
                 <Alternative 
-                key={alternative + Index}
-                label={alternative}
-                order={Index}
-              />
-
+                  label={alternative}
+                  order={index}
+                />
               </div>
-              
             ))}
            
             {answerState === "DEFAULT" && (
