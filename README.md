@@ -4,8 +4,9 @@
 
 Mini Quiz para Testar o Conhecimento Geral
 
-Tela da Home para Iniciar o Quiz
-E uma segunda Tela, do Quiz propriamente dito.
+Tela da Home para iniciar o Quiz <br>
+
+Segunda Tela, do Quiz propriamente dito.
 
 O usuário deve colocar seu nome e clicar em "JOGAR".
 
